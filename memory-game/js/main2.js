@@ -1,5 +1,6 @@
+import MemoryGame from 'MemoryGame';
 (function(){
-    let intervalID = null;
+
     const allCards = [
         {
             id: 1,
@@ -50,6 +51,10 @@
             src: './img/marvel-icons/x-men_logo.png',
         }
     ];
+
+
+
+    let intervalID = null;
     const levelBtns = document.querySelectorAll('.level');
     let skirt = './img/marvel-cover.png';
     let amount = 8;
@@ -101,7 +106,7 @@
         usedCards = allCards.slice(0, amount).concat(allCards.slice(0, amount));
     }
     function setTimer() {
-        let sec = 1, min = 0;
+        let sec = 0, min = 0;
         return setInterval(() => {
             if (sec === 60) {
                 min++;
