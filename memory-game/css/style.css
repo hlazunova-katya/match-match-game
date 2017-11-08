@@ -43,7 +43,8 @@ body{
     background: #ff0000;
     text-decoration: none;
     color: #fff;
-    font-size: 3.8rem;
+    font-size: 3rem;
+    padding: 3px 10px 0;
 }
 header{
     width: 100%;
@@ -208,6 +209,7 @@ main{
     text-transform: none;
     color: #000;
     z-index: 1;
+    padding: 20px;
 }
 .rulesBtn:hover .rules{
     display: flex;
