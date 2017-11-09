@@ -25,16 +25,16 @@ body{
     justify-content: center;
 }
 .container{
-    height: 95%;
-    width: 95%;
+    height: 97%;
+    width: 97%;
     max-width: 1245px;
     align-self: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 .content{
-    min-height: 580px;
+    height: 560px;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -69,20 +69,29 @@ ul{
 .nav-buttons>li:not(:last-child){
     margin-right: 35px;
 }
-.aside-section{
-     width: 295px;
+aside{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-.aside-section:not(:last-child){
-
-    border-bottom: 1px solid #ccc;
+.aside-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 295px;
+    height: 150px;
 }
 .aside-section:not(:first-child) li{
     cursor: pointer;
 }
+.hor-line{
+    height: 1px;
+    background: #ccc;
+}
 .score-section{
     font-size: 4rem;
     text-transform: uppercase;
-    padding-bottom: 26px;
 }
 .score-section ul{
     min-height: 110px;
@@ -107,14 +116,6 @@ ul{
     color: #333;
     font-size: 4rem;
     text-transform: uppercase;
-    margin-bottom: 30px;
-}
-.skirts-section{
-    padding: 40px 0;
-    margin-bottom: 30px;
-}
-.difficulty-section{
-    height: 150px;
 }
 .levels-list{
     display: flex;
@@ -135,15 +136,14 @@ ul{
 }
 .gameField{
     display: grid;
-    grid-gap: 13px;
+    grid-gap: 10px;
 }
-
 .skirts-list img{
     width: 77px;
 }
 .card{
-    width: 135px;
-    height: 135px;
+    width: 130px;
+    height: 130px;
     position: relative;
     cursor: pointer;
 }
@@ -178,6 +178,7 @@ ul{
 }
 main{
     min-width: 860px;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

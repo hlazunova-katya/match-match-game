@@ -75,8 +75,8 @@
         counter.innerText = count = 0;
         matched = 0;
         cardToGuess = null;
-        gameField.style.gridTemplateRows = `repeat(${rows}, 135px)`;
-        gameField.style.gridTemplateColumns = `repeat(${columns}, 135px)`;
+        gameField.style.gridTemplateRows = `repeat(${rows}, 130px)`;
+        gameField.style.gridTemplateColumns = `repeat(${columns}, 130px)`;
         setCards();
         shuffle(usedCards);
         for (let i=0; i<usedCards.length; i++){
