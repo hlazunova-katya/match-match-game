@@ -12,14 +12,7 @@
             <nav class="header-nav">
                 <ul class="nav-buttons">
                     <li id="newGameBtn">New game</li>
-                    <li id="rulesBtn" class="rulesBtn">Rules
-                        <ul id="rules" class="rules">
-                            <li>All cards are mixed up and laid in rows, face down.</li>
-                            <li>You turn over any two cards.</li>
-                            <li>If they match, they disappear, if they don't match, they are turned back over.</li>
-                            <li> The game is over when all the cards have been matched.</li>
-                        </ul>
-                    </li>
+                    <li id="rulesBtn">Rules</li>
                 </ul>
             </nav>
         </header>
@@ -29,7 +22,7 @@
                     <ul>
                         <li class="score-section-item">
                             <h3 class="score-heading">steps:</h3>
-                            <span class="numeric" id="counter"></span>
+                            <span class="numeric" id="counter">0</span>
                         </li>
                         <li class="score-section-item">
                             <h3 class="score-heading">time:</h3>
@@ -69,14 +62,21 @@
                 </section>
             </aside>
             <main>
-                <section id="gameField" class="gameField"></section>
+                <section id="gameField" class="game-field"></section>
                 <section class="congrats" id="win">
                     <p id="winnerHail"></p>
                 </section>
             </main>
         </div>
     </div>
-    <section class="overlay"></section>
-<script rel="script" src="js/main.js" async></script>
+    <section class="overlay" id="overlay">
+            <ul class="rules">
+                <li>All cards are mixed up and laid in rows, face down.</li>
+                <li>You turn over any two cards.</li>
+                <li>If they match, they disappear, if they don't match, they are turned back over.</li>
+                <li> The game is over when all the cards have been matched.</li>
+            </ul>
+    </section>
+    <script rel="script" src="js/main.js" async></script>
 </body>
 </html>

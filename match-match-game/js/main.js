@@ -157,6 +157,14 @@
     newGameBtn.addEventListener('click', () => {
         gameInit();
     });
+    rulesBtn.addEventListener('click', ()=>{
+       overlay.style.display = 'flex';
+    });
+    overlay.addEventListener('click', ()=>{
+       if (event.target===event.currentTarget) {
+           overlay.style.display = 'none';
+       }
+    });
     skirtsList.addEventListener('click', () => {
         skirt = event.target.getAttribute('src');
         setSkirts(skirt);

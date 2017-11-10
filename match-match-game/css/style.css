@@ -134,7 +134,7 @@ aside{
     color: #ffff00;
     background: #333;
 }
-.gameField{
+.game-field{
     display: grid;
     grid-gap: 10px;
 }
@@ -191,27 +191,27 @@ main{
     font-size: 2.5rem;
     line-height: 3.5rem;
 }
-.rulesBtn{
-    position: relative;
-}
 .rules{
-    display: none;
+    display: flex;
     border: 1px solid #ffff00;
     font-family: "Vision Regular", "Calibri Light", sans-serif;
-    position: absolute;
     background: #fff;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     font-size: 2.5rem;
-    width: 350px;
-    height: 250px;
-    top: 30px;
-    right: 0;
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
     text-transform: none;
     color: #000;
-    z-index: 1;
-    padding: 20px;
+    padding: 0 20px;
 }
-.rulesBtn:hover .rules{
-    display: flex;
+.overlay{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(74, 74, 74, 0.9);
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
