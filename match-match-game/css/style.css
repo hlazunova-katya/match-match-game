@@ -1,0 +1,217 @@
+@font-face {
+    font-family: "Vision Regular";
+    src: local("Vision"),
+    url("../fonts/vision-webfont.woff");
+}
+@font-face {
+    font-family: "Vision Black";
+    src: local("Vision Black"),
+    url("../fonts/vision-black-webfont.woff");
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+    width: 100%;
+    font-family: "Vision Regular", "Calibri Light", sans-serif;
+    font-size: 10px;
+}
+body{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.container{
+    height: 97%;
+    width: 97%;
+    max-width: 1245px;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.content{
+    height: 560px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.logo{
+    background: #ff0000;
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+    padding: 3px 10px 0;
+}
+header{
+    width: 100%;
+    height: 40px;
+}
+.header-nav{
+    display: flex;
+    align-items: center;
+
+}
+ul{
+    list-style: none;
+}
+.nav-buttons>li{
+    display: inline-block;
+    font-family: "Vision Black", "Calibri", sans-serif;
+    color: #ff0000;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+.nav-buttons>li:not(:last-child){
+    margin-right: 35px;
+}
+aside{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.aside-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 295px;
+    height: 150px;
+}
+.aside-section:not(:first-child) li{
+    cursor: pointer;
+}
+.hor-line{
+    height: 1px;
+    background: #ccc;
+}
+.score-section{
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.score-section ul{
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.score-section-item, .skirts-list, header{
+    display: flex;
+    justify-content: space-between;
+}
+.numeric{
+    font-family: "Vision Black", "Calibri", sans-serif;
+    background: #ffff00;
+    display: inline-block;
+    min-width: 110px;
+    text-align: center;
+    padding-top: 5px;
+}
+.section-heading{
+    font-family: "Vision Black", "Calibri", sans-serif;
+    color: #333;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.levels-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2.3rem;
+    color: #666;
+}
+.levels-list li, .level-item{
+    padding: 8px;
+}
+.level-item span{
+    color: #000;
+}
+.current-level span{
+    color: #ffff00;
+    background: #333;
+}
+.game-field{
+    display: grid;
+    grid-gap: 10px;
+}
+.skirts-list img{
+    width: 77px;
+}
+.card{
+    width: 130px;
+    height: 130px;
+    position: relative;
+    cursor: pointer;
+}
+.back, .front{
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.front{
+    background-size: cover;
+    background-position: center;
+    transform: perspective(1000px) rotateY(180deg);
+    transition: transform .5s linear;
+}
+.back{
+    background-size: contain;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: transform .5s linear;
+}
+.picked>.front {
+    transform: perspective(1000px) rotateY(0deg);
+}
+.picked>.back{
+    transform: perspective(1000px) rotateY(-180deg);
+}
+.matched{
+    visibility: collapse;
+    transition: visibility 1s linear;
+}
+main{
+    min-width: 860px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.congrats{
+    display: none;
+    width: 60%;
+    height: 60%;
+    background: #fff url(../img/thumbs-up.png) right/contain no-repeat;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+}
+.rules{
+    display: flex;
+    border: 1px solid #ffff00;
+    font-family: "Vision Regular", "Calibri Light", sans-serif;
+    background: #fff;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 2.5rem;
+    width: 40%;
+    height: 50%;
+    border-radius: 10px;
+    text-transform: none;
+    color: #000;
+    padding: 0 20px;
+}
+.overlay{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(74, 74, 74, 0.9);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}

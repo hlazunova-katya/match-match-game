@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Memory Game</title>
+    <link type="text/css" rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a class="logo" href="#"><h1 class="logo">Memory Game</h1></a>
+            <nav class="header-nav">
+                <ul class="nav-buttons">
+                    <li id="newGameBtn">New game</li>
+                    <li id="rulesBtn">Rules</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="content">
+            <aside>
+                <section class="score-section aside-section">
+                    <ul>
+                        <li class="score-section-item">
+                            <h3 class="score-heading">steps:</h3>
+                            <span class="numeric" id="counter">0</span>
+                        </li>
+                        <li class="score-section-item">
+                            <h3 class="score-heading">time:</h3>
+                            <span class="numeric" id="timer">0:00</span>
+                        </li>
+                    </ul>
+                </section>
+                <section class="aside-section hor-line"></section>
+                <section class="skirts-section aside-section">
+                    <h2 class="section-heading">Skirts</h2>
+                    <ul class="skirts-list" id="skirtsList">
+                        <li>
+                            <img id='img' src="img/marvel-cover.png" alt="marvel-logo"/>
+                        </li>
+                        <li>
+                            <img src="img/groot-cover.png" alt="groot">
+                        </li>
+                        <li>
+                            <img src="img/deadpool-cover.png" alt="deadpool">
+                        </li>
+                    </ul>
+                </section>
+                <section class="aside-section hor-line"></section>
+                <section class="difficulty-section aside-section">
+                    <h2 class="section-heading">Difficulty</h2>
+                    <ul class="levels-list" id="difficulty">
+                        <li class="level" id="easy">
+                           <span class="level-item"> Low <span>(5x2)</span> </span>
+                        </li>
+                        <li class="level current-level" id="medium">
+                           <span class="level-item"> Medium <span>(4x4)</span> </span>
+                        </li>
+                        <li class="level" id="difficult">
+                           <span class="level-item"> High <span>(6x4)</span> </span>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+            <main>
+                <section id="gameField" class="game-field"></section>
+                <section class="congrats" id="win">
+                    <p id="winnerHail"></p>
+                </section>
+            </main>
+        </div>
+    </div>
+    <section class="overlay" id="overlay">
+            <ul class="rules">
+                <li>All cards are mixed up and laid in rows, face down.</li>
+                <li>You turn over any two cards.</li>
+                <li>If they match, they disappear, if they don't match, they are turned back over.</li>
+                <li> The game is over when all the cards have been matched.</li>
+            </ul>
+    </section>
+    <script rel="script" src="js/main.js" async></script>
+</body>
+</html>
